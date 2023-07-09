@@ -1,0 +1,92 @@
+<mat-card class="card-decoration">
+    
+    <ng-container *ngIf="currentOffer as offer">
+        <form [formGroup]="form" 
+              class="example-form"  
+              enctype="multipart/form-data" 
+              method="POST">
+    
+        <input-element 
+            [context]="form"
+              [model]="FormModels['TitleModel']"
+              [value]="offer.title">
+        </input-element>
+    
+        <img-upload 
+            [context]="form"
+            [model]="FormModels['ImgModel']"
+            (image)="selectedImg($event)"
+            [value]="offer.image">
+        </img-upload>
+        
+        <ng-container *ngIf="uploadButtonVisibility; else updateButton">
+    
+        <button mat-button 
+            class="menu-button red" 
+            (click)="upload()">
+            Upload image
+    
+            <mat-icon 
+                class="example-icon" 
+                aria-label="Example icon-button with menu icon">
+                upload
+            </mat-icon>       
+        </button>
+    
+        </ng-container>
+    
+    <ng-template #updateButton>
+    
+        <figure class="image-container">
+            <img [src]="uploadImage" id="upload-image" />
+        </figure>
+        
+        <button mat-button 
+            class="menu-button red" 
+            (click)="cancel()">
+    
+            <mat-icon class="example-icon" 
+                aria-label="Example icon-button with menu icon">
+                cancel
+            </mat-icon>
+    
+        </button>
+    
+    </ng-template>
+    
+        <app-description 
+            [context]="form"
+              [model]="FormModels['DescriptionModel']"
+              [value]="offer.description ">
+        </app-description>
+    
+        <input-element
+              [context]="form"
+              [model]="FormModels['PriceModel']"
+              [value]="offer.price.toString()">
+        </input-element>
+    
+        <date-picker
+              [context]="form"
+              [model]="FormModels['FromDateModel']"
+              [value]="offer.fromDate">
+        </date-picker>
+        
+        <date-picker
+              [context]="form"
+              [model]="FormModels['UntilDateModel']"
+              [value]="offer.untilDate">
+        </date-picker>
+    
+        <mat-card-actions id="button-container">
+            <button mat-raised-button 
+                color="primary" 
+                (click)="actionForm()"
+                [disabled]="form.invalid">
+                Submit
+            </button>
+        </mat-card-actions>
+        </form>
+    </ng-container>
+    </mat-card>
+    

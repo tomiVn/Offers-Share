@@ -1,0 +1,30 @@
+<article *ngIf="data" class="article">
+
+    <header>
+        <h3 class="article-title">{{data.title}}</h3>
+    </header>
+
+    <content class="container">
+
+        <div>
+            <figure class="image-container">
+                <img class="img" [src]="[data.image]">
+            </figure>
+        </div>
+       
+        <div class="article-content">
+
+            <ng-container *ngFor="let content of data.content">
+
+                <div class="row-content">
+                    
+                        <h3><b>{{content.header}}</b></h3>
+
+                        <p *ngFor="let p of content.text">{{p}}</p>
+                </div>
+            </ng-container>
+
+        </div>
+    </content>
+
+</article>

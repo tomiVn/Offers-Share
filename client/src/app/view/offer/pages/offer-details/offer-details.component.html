@@ -1,0 +1,94 @@
+<mat-card class="card-decoration">
+
+    <ng-container *ngIf="(currentOffer)  as offer">
+
+        <article class="article">
+
+            <header>
+                <h3 class="article-title">{{offer.title}}</h3>
+            </header>
+
+            <content class="content">
+
+                <div>
+                    <figure class="image-container">
+                        <img class="img" [src]="[offer.image]">
+                    </figure>
+
+                    <div class="buttons-container">
+                        <ng-container *ngIf="owner(offer?.creator); else user_options">
+
+                            <button mat-button [routerLink]="['/offer', offer._id, 'edit']" class="color-yellow">
+                                Edit
+                            </button>
+                            &nbsp;
+                            <button mat-button (click)="del(offer)" class="color-red">
+                                Delete
+                            </button>
+
+                        </ng-container>
+
+                        <ng-template #user_options>
+                            <ng-container *ngIf="isUser">
+
+                                <ng-container *ngIf="checkList(currentUser, offer); else unwatch">
+                                    <button mat-button (click)="addToList(offer, currentUser._id)" class="color-yellow">
+                                        Add to watch List
+                                    </button>
+                                </ng-container>
+
+                                <ng-template #unwatch>
+                                    <button mat-button (click)="removeFromList(offer, currentUser._id)"
+                                        class="color-red">
+                                        Remove from Watch List
+                                    </button>
+                                </ng-template>
+
+                            </ng-container>
+                        </ng-template>
+                    </div>
+
+                </div>
+
+                <div class="description-container">
+
+                    <p><strong>Description:</strong></p>
+
+                    <p> {{offer.description}} </p>
+
+                    <p><strong>This offer is valid:</strong></p>
+
+                    <p> from {{offer.fromDate | date}} - until {{offer.untilDate | date }} </p>
+
+                    <p *ngIf="offer?.contactInfo"><strong>Contatc info:</strong></p>
+
+                    <p *ngIf="offer?.contactInfo">{{ offer.contactInfo }}</p>
+
+                    <p class="text-align-right price">Price <b>{{offer.price | currency:'EUR' }}</b></p>
+
+                    <p class="text-align-right">
+                        <i>
+                            Created {{offer?.createdAt | date}},
+                            <!-- ToDo
+                            <span *ngIf="isOwner(offer?.creator)">
+                                from {{offer?.creator?.name || currentUser.name}}
+                            </span> -->
+                        </i>
+                    </p>
+
+                    <p class="text-align-right" *ngIf="offer?.watchedList?.length > 0 ">
+                        <i>This offer is watching from: {{offer?.watchedList?.length}}</i>
+                    </p>
+
+
+                </div>
+
+            </content>
+        </article>
+
+    </ng-container>
+
+    <ng-template #loading>
+        <h3>Loading...</h3>
+    </ng-template>
+</mat-card>

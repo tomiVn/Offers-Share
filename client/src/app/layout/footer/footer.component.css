@@ -1,0 +1,14 @@
+.footer{
+    /* display: flex; */
+    min-height: 60px;
+}
+
+.p-decoration{
+    text-align: center;
+    margin: 0 auto;
+    color: black;
+}
+
+.color-white{
+    color: antiquewhite;
+}

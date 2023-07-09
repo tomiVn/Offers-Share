@@ -1,0 +1,46 @@
+<mat-card class="card-decoration">
+    <div *ngIf="user"> 
+        <!-- else loading" -->
+        <form #userform [formGroup]="form" class="example-form" (ngSubmit)="updateProfile(userform)">
+
+        <input-element
+                [context]="form"
+                  [model]="FormModels['NameModel']"
+                  [value]="user.name">
+        </input-element>
+
+        <app-select-drop-down 
+                [context]="form" 
+                  [model]="FormModels['GenderModel']"
+                  [value]="user.gender">
+        </app-select-drop-down>
+
+        <date-picker 
+               [context]="form"
+                 [model]="FormModels['BornModel']"
+                 [value]="user.born">
+        </date-picker>
+
+        <app-autocomplete 
+              [context]="form" 
+                [model]="FormModels['DialCodeModel']"
+                [value]="user.dial_code">
+        </app-autocomplete>
+
+        <input-element
+                [context]="form"
+                  [model]="FormModels['PhoneModel']"
+                  [value]="user.phone">
+        </input-element>
+
+        <mat-card-actions class="form-input-container">
+            <button mat-raised-button color="primary" [disabled]="form.invalid">
+                Submit
+            </button>
+        </mat-card-actions>
+        </form>       
+    </div>
+    <ng-template *ngIf="!user">
+      <h3>Loading...</h3>
+  </ng-template>
+</mat-card>

@@ -1,0 +1,19 @@
+<app-header [sideNav]="sideNav"></app-header>
+
+<mat-sidenav-container class="sidenav-container">
+
+    <mat-sidenav #sideNav="matSidenav" class="sidenav">
+        <app-sidenav></app-sidenav>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+
+        <main id="content">
+            <router-outlet></router-outlet>
+        </main>
+
+        <app-footer></app-footer>
+
+    </mat-sidenav-content>
+
+</mat-sidenav-container>

@@ -1,0 +1,44 @@
+<mat-card class="card-decoration">
+
+    <h3 class="login-form-title">Register form!</h3>
+
+    <form 
+        [formGroup]="form" 
+        class="example-form" 
+        #userlogin="ngForm" 
+        (ngSubmit)="actionForm(userlogin.value)"
+        method="POST">
+
+    <input-element
+        [context]="form"
+        [model]="FormModels['NameModel']">
+    </input-element>
+
+    <input-element
+        [context]="form"
+        [model]="FormModels['EmailModel']">
+    </input-element>
+
+    <input-element
+        [context]="form"
+        [model]="FormModels['PasswordModel']">
+    </input-element>
+
+    <input-element
+        [context]="form"
+        [model]="FormModels['RepeatPasswordModel']">
+    </input-element>
+
+    <mat-card-actions id="button-container">
+        <button mat-raised-button 
+            color="primary" 
+            [disabled]="form.invalid">
+            Submit
+        </button>
+    </mat-card-actions> 
+
+    </form>
+
+    <p>Already have an account? <a mat-button [routerLink]="['/auth/log-in']">Log in here</a></p>
+
+</mat-card>

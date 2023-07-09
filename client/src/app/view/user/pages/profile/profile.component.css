@@ -1,0 +1,75 @@
+.card-decoration{
+    min-height: calc(100vh - 138px);
+}
+.header {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 3px solid #9E9E9E;
+}
+
+.image-container {
+    margin: 0 auto;
+    width: 120px;
+    height: 120px;
+}
+
+.image-container .avatar {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.buuton-container {
+    margin: 0 auto;
+    display: flex;
+    gap: 4px;
+    justify-content: space-between;
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}
+
+.blue {
+    color: #3949AB;
+}
+
+.header-user-decoration {
+    background-color: #3949AB;
+    padding: 6px; 
+    color: white;
+    height: 40px;
+    border-bottom: 1px solid white;
+
+    h3 {
+        vertical-align: middle;
+    }
+}
+
+.row{
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+}
+
+.offers-title{
+    background-color: #3949AB;
+    color: white;
+    padding: 6px;
+    text-align: right;
+}
+.offers {
+    /* width: 100%; */
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   align-items: center;   
+   gap: 6px;
+}

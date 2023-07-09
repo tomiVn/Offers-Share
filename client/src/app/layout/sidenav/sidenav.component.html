@@ -1,0 +1,93 @@
+<aside id="sidenav-content">
+
+    <picture class="picture">
+
+        <div class="img-container">
+            <a routerLink="/">
+                <img src="https://res.cloudinary.com/duyubdgsj/image/upload/v1668937744/assets/logo-social_ococaz.png"
+                    alt="" class="img" />
+            </a>
+        </div>
+
+    </picture>
+
+    <nav clas="navigation">
+        <ul class="navigation-links">
+
+            <li class="link">
+                <a [routerLink]="['/']">
+                    <mat-icon class="navigation-icon" aria-label="Navigation to home page icon">
+                        home
+                    </mat-icon>
+                    Home
+                </a>
+            </li>
+
+            <li class="link">
+                <a [routerLink]="['/about-us']">
+                    <mat-icon class="navigation-icon" aria-label="Navigation to About us page icon">
+                        info
+                    </mat-icon>
+                    About us
+                </a>
+            </li>
+
+            <li class="link">
+                <a [routerLink]="['/contact-us']">
+                    <mat-icon class="navigation-icon" aria-label="Navigation to Contact us page icon">
+                        contact_page
+                    </mat-icon>
+                    Contacts
+                </a>
+            </li>
+
+        </ul>
+    </nav>
+
+    <mat-divider></mat-divider>
+
+    <article class="side-form">
+        <section>
+            <fieldset class="side-form-conteiner">
+                <legend class="side-form-header">Your first vacation day?</legend>
+
+                <form #dateform [formGroup]="form" (ngSubmit)="onSubmit(dateform)">
+                    <ul class="side-form-content">
+                        <li class="date">
+                            <date-picker 
+                                [context]="form" 
+                                [model]="FormModels['DateModel']" 
+                                [value]="curentDate">
+                            </date-picker>
+                        </li>
+                        <li>
+                            <button mat-raised-button 
+                                color="primary" 
+                                class="date-button">Submit
+                            </button>
+                        </li>
+                    </ul>
+                </form>
+
+            </fieldset>
+        </section>
+
+        <footer>
+            <p class="side-form-footer"> Grab our offers! </p>
+        </footer>
+    </article>
+
+    <mat-grid-list cols="3" rowHeight="140px">
+        <mat-grid-tile>
+            <img src="https://res.cloudinary.com/duyubdgsj/image/upload/v1670951962/assets/y-txt-here.jpg_z1wfd8.png"
+                width="100%" />
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <img src="https://res.cloudinary.com/duyubdgsj/image/upload/v1670951002/assets/you-add-here_b59ylz.jpg"
+                width="100%" />
+        </mat-grid-tile>
+
+        <mat-grid-tile> </mat-grid-tile>
+    </mat-grid-list>
+</aside>

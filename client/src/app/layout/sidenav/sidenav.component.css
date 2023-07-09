@@ -1,0 +1,94 @@
+#sidenav-content {
+    min-height: calc(100vh - 60px);
+    width: 350px;
+}
+
+.picture {
+    height: 200px;
+    padding: 10px 0 60px 0;
+    background-image: url("https://res.cloudinary.com/duyubdgsj/image/upload/v1668937727/assets/hover-photo_l7ofej.png");
+}
+
+.img-container {
+    width: 120px;
+    height: 120px;
+    margin: auto;
+}
+
+.img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 1px solid #C5CAE9;
+    padding: 5px;
+    object-fit: cover;
+}
+
+.img:hover {
+    box-shadow: 0 0 2px 1px #424242;
+}
+
+.navigation-links {
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+}
+
+.navigation-links a {
+    text-decoration: none;
+    color: #424242;
+    font-size: 1.36em;
+    font-weight: 500;
+}
+
+.navigation-links a:hover {
+    color: #3949AB;
+}
+
+.navigation-links a:active {
+    color: #FF0266;
+}
+
+.link .navigation-icon {
+    vertical-align: middle;
+}
+
+.side-form {
+    padding: 8px 6px;
+}
+
+.side-form-conteiner {
+    background-color: #FF0266;
+    border: 0;
+}
+
+.side-form-header{
+    color: white;
+    font-size: large;
+    background-color: #3949AB;
+    border-radius: 3px;
+    padding: 6px;
+}
+
+.side-form-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.date {
+    max-width: 220px;
+    color: #424242;
+}
+
+.side-form-footer{
+    text-align: right;
+    color: #424242;
+}

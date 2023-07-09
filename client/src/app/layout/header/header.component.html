@@ -1,0 +1,59 @@
+<header>
+    <mat-toolbar color="primary" class="header mat-elevation-z4">
+        <!-- class="mat-elevation-z4 top-nav" -->
+        <div>
+            <button mat-icon-button *ngIf="this.sideNav.mode === 'over'" (click)="this.sideNav.toggle()"
+                aria-label="Example icon-button with menu icon">
+
+                <mat-icon *ngIf="!sideNav.opened">menu</mat-icon>
+                <mat-icon *ngIf="sideNav.opened">close</mat-icon>
+            </button>
+        </div>
+
+        <div>
+
+            <ng-container>
+                <a class="header-nav" mat-button [routerLink]="['/offer']">
+                    Offers
+                </a>
+                <!-- <a class="header-nav" mat-button [routerLink]="['/offer/create']">
+                    Create Offer
+                </a> -->
+            </ng-container>
+
+            <ng-container *ngIf="isUser; else login">
+
+                <button class="header-nav" mat-icon-button matTooltip="Basic" [matMenuTriggerFor]="menu"
+                    aria-label="Example icon-button with a menu">
+                    <mat-icon>
+                        account_circle
+                    </mat-icon>
+                </button>
+
+                <mat-menu #menu="matMenu">
+
+                    <a mat-menu-item [routerLink]="['/user/' + user?._id]">
+                        Profile
+                    </a>
+
+                    <a mat-menu-item [routerLink]="['/offer/create']" *ngIf="userRoleRequirement(user?.role)">
+                        Create Offer
+                    </a>
+                </mat-menu>
+
+                <button class="header-nav" mat-button (click)="logOut()">
+                    LogOut
+                </button>
+            </ng-container>
+            <!-- <span class="mat-body-2">Hello {{userName}}</span> -->
+
+            <ng-template #login>
+                <a class="header-nav" mat-button [routerLink]="['/auth/log-in']">
+                    LogIn
+                </a>
+            </ng-template>
+
+        </div>
+
+    </mat-toolbar>
+</header>

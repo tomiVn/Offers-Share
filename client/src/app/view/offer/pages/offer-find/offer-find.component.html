@@ -1,0 +1,35 @@
+<mat-card class="card">
+    <p *ngIf="loading$ | async;">Loading...</p>
+
+    <section *ngIf="(this.offers$ | async) as vm;">
+
+        <div class="search-box">
+            <mat-icon>
+                search
+            </mat-icon>
+
+            <input #input matInput 
+                (keyup)="applyFilter($event)" 
+                placeholder="Looking For"  
+                value="{{valueSearch}}">      
+        </div>
+
+        <mat-divider></mat-divider>
+
+        <br>
+
+        <div class="offers">
+            <app-offer-basic-template *ngFor="let element of vm;" [offer]="element">
+            </app-offer-basic-template>
+        </div>
+
+        <h3 *ngIf="vm.length === 0">Sorry, no result found!</h3>
+    </section>
+    
+    <div *ngIf="(error$ | async) as err">
+
+        <p>Something happen!</p>
+
+        <p>{{err}}</p>
+    </div>
+</mat-card>

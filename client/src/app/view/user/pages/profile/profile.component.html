@@ -1,0 +1,104 @@
+<mat-card class="card-decoration">
+     <mat-card-header class="header" *ngIf="user">
+
+          <figure class="image-container">
+                
+               <img [src]="user.avatar" class="avatar">
+          </figure>
+
+          <div class="buuton-container">
+
+               <button mat-button class="menu-button" [routerLink]="['/user', user?._id,'edit']">
+                    Edit
+                    <mat-icon class="example-icon blue" aria-label="Example icon-button with menu icon">
+                         edit
+                    </mat-icon>
+               </button>
+
+               <form [formGroup]="form" class="example-form">
+
+                    <ng-container *ngIf="showUpdateButton; else uploadButton;">
+
+                         <button mat-button class="menu-button green" [disabled]="form.invalid"
+                              (click)="update()">
+                              update
+                         </button>
+
+                         <button mat-button class="menu-button red" (click)="cancel()">
+                              <mat-icon class="example-icon" aria-label="Example icon-button with menu icon">
+                                   cancel
+                              </mat-icon>
+                         </button>
+                    </ng-container>
+
+                    <ng-template #uploadButton>
+
+                         <img-upload [context]="form" [model]="FormModels['ImgModel']"
+                              (image)="select($event)">
+                         </img-upload>
+
+                         <button mat-button class="menu-button" (click)="upload()">
+                              Upload
+                              <mat-icon class="example-icon blue" aria-label="Example icon-button with menu icon">
+                                   upload
+                              </mat-icon>
+                         </button>
+
+                    </ng-template>
+               </form>
+
+          </div>
+
+          <div class="header-user-decoration">
+               <h1>{{user.name}}</h1>
+          </div>
+
+     </mat-card-header>
+     <mat-card-content>
+          <div class="row">
+               <section>                 
+                    <h3>User information: </h3>
+                    <p *ngIf="user?.gender">                  <b>gender:</b> {{user.gender}}                  </p>
+                    <p *ngIf="user?.born">                    <b>born:  </b> {{user?.born | date}}            </p>
+                    <p *ngIf="user?.email">                   <b>email: </b> {{user?.email}}                  </p>
+                    <p *ngIf="user?.dial_code || user?.phone"><b>phone: </b> {{user.dial_code}} {{user.phone}}</p>                    
+               </section>
+               <section>
+                    <h3>Application information:</h3>
+                    <p><b>Post offers:    </b> {{user?.created_offers.length  || 'Not created offers yet!'}}</p>
+                    <p><b>Watching offers:</b> {{user?.watchOfferList?.length || 'Not watching offers yet!'}}</p>
+               </section>
+          </div>      
+     </mat-card-content>
+
+     <!-- <div *ngIf="user?.created_offers.length > 0">
+          <h3>Created Offers:</h3>
+          <app-table [data]="user.created_offers" [displayHeader]="['_id', 'title', 'price']"></app-table>
+     </div> -->
+     <div *ngIf="createdOffers.length > 0" class="offers-container">
+          <h3 class="offers-title">Offers created</h3>
+          <div class="offers"  >         
+               <app-offer-basic-template *ngFor="let element of createdOffers;" [offer]="element">
+     
+               </app-offer-basic-template>
+          </div>
+     </div>
+
+     <div *ngIf="watchedOffers.length > 0"  class="offers-container">
+          <h3 class="offers-title">Offers watched</h3>
+          <div class="offers"  >         
+               <app-offer-basic-template *ngFor="let element of watchedOffers;" [offer]="element">
+     
+               </app-offer-basic-template>
+          </div>
+     </div>
+
+     <!-- <div *ngIf="(user?.watched_offers) as vm;"  class="offers-container">
+          <h3 class="offers-title">Offers watched</h3>
+          <div class="offers"  >         
+               <app-offer-basic-template *ngFor="let element of vm;" [offer]="element">
+     
+               </app-offer-basic-template>
+          </div>
+     </div> -->
+</mat-card>

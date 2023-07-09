@@ -1,0 +1,89 @@
+<mat-card 
+    class="card-decoration">
+
+    <form 
+        [formGroup]="form" 
+        class="example-form" 
+        (ngSubmit)="actionForm()" 
+        enctype="multipart/form-data" 
+        method="POST">
+
+    <input-element 
+        [context]="form"
+        [model]="FormModels['TitleModel']">
+    </input-element>
+
+    <img-upload 
+        [context]="form"
+        [model]="FormModels['ImgModel']"
+        (image)="selectedImg($event)">
+    </img-upload>
+    
+    <ng-container *ngIf="uploadButtonVisibility; else updateButton">
+
+    <button mat-button 
+        class="menu-button image-button" 
+        (click)="upload()">
+
+        Upload image
+
+        <mat-icon 
+            class="example-icon" 
+            aria-label="Example icon-button with menu icon">
+            upload
+        </mat-icon>       
+    </button>
+
+    </ng-container>
+
+<ng-template #updateButton>
+
+    <figure class="image-container">
+        <img [src]="uploadImage" id="upload-image" />
+    </figure>
+    
+    <button mat-button 
+        class="menu-button red" 
+        (click)="cancel()">
+
+        Cancel image
+
+        <mat-icon class="example-icon" 
+            aria-label="Example icon-button with menu icon">
+            cancel
+        </mat-icon>
+
+    </button>
+
+</ng-template>
+
+    <app-description 
+        [context]="form"
+        [model]="FormModels['DescriptionModel']">
+    </app-description>
+
+
+    <input-element
+        [context]="form"
+        [model]="FormModels['PriceModel']">
+    </input-element>
+
+    <date-picker
+        [context]="form"
+        [model]="FormModels['FromDateModel']">
+    </date-picker>
+    
+    <date-picker
+        [context]="form"
+        [model]="FormModels['UntilDateModel']">
+    </date-picker>
+
+    <mat-card-actions id="button-container">
+        <button mat-raised-button 
+            color="primary" 
+            [disabled]="form.invalid">
+            Submit
+        </button>
+    </mat-card-actions> 
+    </form>
+</mat-card>

@@ -1,0 +1,14 @@
+.sidenav-container {
+    background-color: #EEEEEE;
+}
+
+.sidenav {
+    /* background-color: brown; */
+    top: 60px;
+    position: fixed;
+}
+
+#content {
+    padding: 66px 6px 6px 6px;
+    min-height: calc(100vh - 64px);
+}
