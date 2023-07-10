@@ -55,7 +55,7 @@ Offers_Share is built using the following technologies:
 -    [Nginx](https://nginx.org/): A high-performance web server and reverse proxy server.
 -    [Cloudinary](https://cloudinary.com/): A cloud-based media management platform for storing and manipulating images and videos.
 
--   **CODE**: All code is wrote from me. In this repository i am not share all code. Some futures are not there. I am redy to explain if any one have questions.
+**Information**: Repository contains app structure and architecture but some of the futures and important files are not included.
 
 ## Screenshots
 
