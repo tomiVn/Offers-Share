@@ -2,7 +2,6 @@ import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild, inj
 import { Observable, takeWhile, } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
 import { useOfferFn } from '../../config/use.offer';
-import { loadOffersFn } from '../../helpers/load.offers';
 import { filterOfferFn } from '../../helpers/offer-find/filter.offers';
 
 @Component({
@@ -14,16 +13,16 @@ export class OfferFindComponent implements OnInit, OnDestroy, AfterViewInit {
 
     @ViewChild("input") inputField!: ElementRef;
     
-    router              = inject(Router);
-    route               = inject(ActivatedRoute);
+    router                  = inject(Router);
+    route                   = inject(ActivatedRoute);
 
-    useOffer            = useOfferFn();
-    toastr              = this.useOffer.toastr;
-    offerEntityService  = this.useOffer.serviceEntity;
-   
-    isAlive             = true;
-    options             = {};
-    valueSearch         = '';
+    useOffer                = useOfferFn();
+    toastr                  = this.useOffer.toastr;
+    offerEntityService      = this.useOffer.serviceEntity;
+
+    isAlive                 = true;
+    options                 = {};
+    valueSearch             = '';
 
     offers$:  Observable<any>;
     error$:   Observable<any>;
@@ -41,8 +40,8 @@ export class OfferFindComponent implements OnInit, OnDestroy, AfterViewInit {
 
     ngOnInit(): void {
 
-        loadOffersFn.call(this);
-
+        this.offerEntityService.getAll();
+        
         filterOfferFn.call(this);    
     }
 

@@ -1,5 +1,6 @@
 <mat-card class="card">
-    <p *ngIf="loading$ | async;">Loading...</p>
+    
+    <p *ngIf="(loading$ | async)">Loading...</p>
 
     <section *ngIf="(this.offers$ | async) as vm;">
 
@@ -8,10 +9,9 @@
                 search
             </mat-icon>
 
-            <input #input matInput 
-                (keyup)="applyFilter($event)" 
-                placeholder="Looking For"  
-                value="{{valueSearch}}">      
+            <input #input matInput (keyup)="applyFilter($event)" 
+                placeholder="Looking For" 
+                value='{{valueSearch}}' >
         </div>
 
         <mat-divider></mat-divider>
@@ -25,11 +25,16 @@
 
         <h3 *ngIf="vm.length === 0">Sorry, no result found!</h3>
     </section>
-    
+
     <div *ngIf="(error$ | async) as err">
 
         <p>Something happen!</p>
 
-        <p>{{err}}</p>
+        <div *ngFor="let error of err?.error?.error?.payload?.data">
+
+            <p>{{error}}</p>
+            
+        </div>
+
     </div>
 </mat-card>
