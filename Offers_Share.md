@@ -7,6 +7,22 @@
 
 Offers_Share is a web application that enables users to share and discover great offers, deals, and discounts. It provides a platform for users to contribute, explore, and take advantage of exciting offers in an interactive and user-friendly manner.
 
+## Architecture
+
+The application follows a multi-container architecture using Docker. It follows a microservices architecture, where different components of the application are deployed as separate containers. This approach offers flexibility, scalability, and ease of deployment.
+
+### Frontend Service
+
+The frontend service handles the user interface and provides an intuitive and responsive web interface for users to browse, search, and submit offers.
+
+### Backend Service
+
+The backend service is responsible for processing user requests, handling business logic, and communicating with external APIs or databases.
+
+### Database Service
+
+This service is responsible for storing and retrieving data required by the application.
+
 ## Features
 
 -    **Offer Listing**: Browse through a wide range of offers.
@@ -89,8 +105,3 @@ Offers_Share is built using the following technologies:
 ### Responsive
 
 ![Mobile view](https://res.cloudinary.com/duyubdgsj/image/upload/v1688935023/offers_share_project_presentation/2023-07-09_23_31_12-Window_t9lfs3.png)
-
-
-
-
-
