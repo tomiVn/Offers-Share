@@ -1,3 +1,4 @@
+import { response } from "src/app/utils/methods/response";
 import { isValidDate } from "./date.validation";
 
 export function filterOfferFn(this: any) {
@@ -10,9 +11,10 @@ export function filterOfferFn(this: any) {
 
             console.log('[ Date Error ] - Please write the date in the format YYYY-MM-DD.', date);
 
-            this.toastr.error('Please write the date in the format YYYY-MM-DD.', '[ Date Error ]');
-
-            return;
+            this.router.navigate(['/offer']);
+            
+            return response.error(this.toastr, '', 
+                'Please write the date again in format YYYY-MM-DD.', 'Date Error');
         }
 
         this.date = date ? new Date(date).toISOString().split('T')[0] : undefined;
@@ -21,19 +23,28 @@ export function filterOfferFn(this: any) {
 
         const options = {
 
-            date: date ? new Date(date).toISOString().split('T')[0] : undefined,
+            date: this.date,
 
-            filter: filter ? filter : undefined,
+            filter: this.valueSearch,
 
             sort: 'price'
         };
 
-        console.log('[Filter Options]', options);
+        if(options.date || options.filter){
 
-        this.offerEntityService.setFilter(options);
+            console.log('[Filter Options]', options);
 
-        this.offers$ = options.date || options.filter
-            ? this.offerEntityService.filteredEntities$ : this.offerEntityService.entities$;
+            this.offerEntityService.setFilter(options);
 
-    });
+            this.offers$ = this.offerEntityService.filteredEntities$;
+            
+            return
+        }
+        
+        this.offers$ = this.offerEntityService.entities$;
+    },
+    ((err: any) => {
+        
+        response.error(this.toastr, err, 'Filter Error');
+    }));
 }
