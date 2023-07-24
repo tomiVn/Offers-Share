@@ -75,6 +75,7 @@ Offers_Share is built using the following technologies:
 -    [toastr](https://www.npmjs.com/package/toastr): A JavaScript library for displaying toast notifications.
 -    [Nginx](https://nginx.org/): A high-performance web server and reverse proxy server.
 -    [Cloudinary](https://cloudinary.com/): A cloud-based media management platform for storing and manipulating images and videos.
+-    [Prometheus](https://prometheus.io/): An open-source monitoring system that collects and stores time-series metrics. Prometheus helps us monitor the performance and health of various components within Offers_Share.
 
 **Information**: A repository typically contains various components of a software project, including code, app structure, and architectural elements. However, it's important to note that not all features and essential files may be included in the repository. This could be due to various reasons such as sensitive information, proprietary algorithms, or large binary files that are not suitable for version control. Therefore, while the repository provides a valuable insight into the project, it may not encompass all the functionalities or crucial files associated with it.
 
