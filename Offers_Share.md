@@ -9,7 +9,7 @@ Offers_Share is a web application that enables users to share and discover great
 
 ## Architecture
 
-The application follows a multi-container architecture using Docker. It follows a microservices architecture, where different components of the application are deployed as separate containers. This approach offers flexibility, scalability, and ease of deployment.
+The application follows a modern multi-container architecture using Docker, with a microservices approach to facilitate flexibility, scalability, and ease of deployment. Key components include the Frontend Service, Backend Service, and Database Service, which work together harmoniously to deliver a sophisticated and user-friendly platform. Application comes with built-in monitoring to ensure a reliable and high-performance user experience.
 
 ### Frontend Service
 
@@ -22,6 +22,11 @@ The backend service is responsible for processing user requests, handling busine
 ### Database Service
 
 This service is responsible for storing and retrieving data required by the application.
+
+### Monitoring with Prometheus and Blackbox Exporter:
+
+These monitoring tools provide crucial insights into the health and behavior of our microservices architecture.
+Prometheus is configured to set up alerts based on predefined thresholds. When a metric exceeds the specified limits, Prometheus triggers alerts and sends notifications to our operations team via email. This proactive approach ensures prompt incident response and issue resolution.
 
 ## Features
 
@@ -105,3 +110,9 @@ Offers_Share is built using the following technologies:
 ### Responsive
 
 ![Mobile view](https://res.cloudinary.com/duyubdgsj/image/upload/v1688935023/offers_share_project_presentation/2023-07-09_23_31_12-Window_t9lfs3.png)
+
+### Prometheus
+
+![Alerts view](https://res.cloudinary.com/duyubdgsj/image/upload/v1690238902/2023-07-25_01_00_45-_cwrfjd.png)
+
+
