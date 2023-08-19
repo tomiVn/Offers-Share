@@ -1,7 +1,7 @@
 # Offers_Share
 
 
-**Access Offers_Share in your browser at** [https://offers-share](https://shareoffer-tomivnikolov.b4a.run/) 
+**Access Offers_Share in your browser at** [https://shareoffer](https://shareoffer-tomivnikolov.b4a.run/) 
 
 ## Overview
 
