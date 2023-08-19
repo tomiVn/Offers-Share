@@ -1,7 +1,7 @@
 # Offers_Share
 
 
-**Access Offers_Share in your browser at** [http://offers-share.westeurope.azurecontainer.io/](http://offers-share.westeurope.azurecontainer.io/) 
+**Access Offers_Share in your browser at** [https://offers-share](https://shareoffer-tomivnikolov.b4a.run/) 
 
 ## Overview
 
