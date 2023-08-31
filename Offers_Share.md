@@ -1,7 +1,7 @@
 # Offers_Share
 
 
-**Access Offers_Share in your browser at** [http://offers-share.westeurope.azurecontainer.io/](http://offers-share.westeurope.azurecontainer.io/) 
+**Access Offers_Share in your browser at** [link](https://shareoffer-tomivnikolov.b4a.run/) 
 
 ## Overview
 
@@ -75,7 +75,6 @@ Offers_Share is built using the following technologies:
 -    [toastr](https://www.npmjs.com/package/toastr): A JavaScript library for displaying toast notifications.
 -    [Nginx](https://nginx.org/): A high-performance web server and reverse proxy server.
 -    [Cloudinary](https://cloudinary.com/): A cloud-based media management platform for storing and manipulating images and videos.
--    [Prometheus](https://prometheus.io/): An open-source monitoring system that collects and stores time-series metrics. Prometheus helps us monitor the performance and health of various components within Offers_Share.
 
 **Information**: A repository typically contains various components of a software project, including code, app structure, and architectural elements. However, it's important to note that not all features and essential files may be included in the repository. This could be due to various reasons such as sensitive information, proprietary algorithms, or large binary files that are not suitable for version control. Therefore, while the repository provides a valuable insight into the project, it may not encompass all the functionalities or crucial files associated with it.
 
@@ -83,34 +82,41 @@ Offers_Share is built using the following technologies:
 
 ### Home Page
 
-![Home Page](https://res.cloudinary.com/duyubdgsj/image/upload/v1688935023/offers_share_project_presentation/2023-07-09_23_16_23-Window_z0dizv.png)
+![Home Page](https://res.cloudinary.com/duyubdgsj/image/upload/v1693473497/offers_share_project_presentation/2023-08-31_11_32_51-_etted6.png)
 
 ### Offers Listing
 
-![All Offers](https://res.cloudinary.com/duyubdgsj/image/upload/v1688935021/offers_share_project_presentation/2023-07-09_23_19_26-Window_l5bzea.png)
+![All Offers](https://res.cloudinary.com/duyubdgsj/image/upload/v1693473502/offers_share_project_presentation/2023-08-31_11_53_21-Window_lcj7rb.png)
 
-![Get Available offers for specific Date](https://res.cloudinary.com/duyubdgsj/image/upload/v1688935022/offers_share_project_presentation/2023-07-09_23_18_27-Window_jprjzr.png)
+![Get Available offers for specific Date](https://res.cloudinary.com/duyubdgsj/image/upload/v1693473500/offers_share_project_presentation/2023-08-31_11_42_23-_fbsnlc.png)
 
-![Filter offers](https://res.cloudinary.com/duyubdgsj/image/upload/v1688935021/offers_share_project_presentation/2023-07-09_23_20_40-Window_ochief.png)
+![Filter offers](https://res.cloudinary.com/duyubdgsj/image/upload/v1693473500/offers_share_project_presentation/2023-08-31_11_41_37-_ala510.png)
 
-![Anonimous visitor - Details Page](https://res.cloudinary.com/duyubdgsj/image/upload/v1688935022/offers_share_project_presentation/2023-07-09_23_22_29-_l4i3bx.png)
+![Anonimous visitor - Details Page](https://res.cloudinary.com/duyubdgsj/image/upload/v1693473499/offers_share_project_presentation/2023-08-31_11_45_58-_fzzzkk.png)
 
-![Creator user - Details Page](https://res.cloudinary.com/duyubdgsj/image/upload/v1688935021/offers_share_project_presentation/2023-07-09_23_26_20-Window_kbhxwh.png)
+![Creator user - Details Page](https://res.cloudinary.com/duyubdgsj/image/upload/v1693473500/offers_share_project_presentation/2023-08-31_12_01_17-_l1aqrv.png)
 
-![Creator user - Edit Page](https://res.cloudinary.com/duyubdgsj/image/upload/v1688935021/offers_share_project_presentation/2023-07-09_23_27_09-Window_clzyfy.png)
+![Offer edit Page](https://res.cloudinary.com/duyubdgsj/image/upload/v1693473497/offers_share_project_presentation/2023-08-31_12_07_05-Window_puijml.png)
+
+### Shoping Cart
+
+![Add customers information](https://res.cloudinary.com/duyubdgsj/image/upload/v1693473497/offers_share_project_presentation/2023-08-31_11_47_20-Window_dgc4hm.png)
+
+![Shopping Cart - checkout](https://res.cloudinary.com/duyubdgsj/image/upload/v1693473495/offers_share_project_presentation/2023-08-31_11_47_59-Window_lozbbk.png)
+
+![Add Contacts information](https://res.cloudinary.com/duyubdgsj/image/upload/v1693473496/offers_share_project_presentation/2023-08-31_11_49_04-_hr3fbt.png)
 
 ### Authenticate
     
-
-![Log-ig](https://res.cloudinary.com/duyubdgsj/image/upload/v1688935022/offers_share_project_presentation/2023-07-09_23_23_11-Window_eszrp3.png)
+![Log-ig](https://res.cloudinary.com/duyubdgsj/image/upload/v1693473515/offers_share_project_presentation/2023-08-31_11_40_14-_vqajen.png)
 
 ### Profile
 
-![Profile](https://res.cloudinary.com/duyubdgsj/image/upload/v1688935020/offers_share_project_presentation/2023-07-09_23_25_16-_q9yxvt.png)
+![Profile](https://res.cloudinary.com/duyubdgsj/image/upload/v1693473528/offers_share_project_presentation/2023-08-31_12_05_39-_g2efqa.png)
 
 ### Responsive
 
-![Mobile view](https://res.cloudinary.com/duyubdgsj/image/upload/v1688935023/offers_share_project_presentation/2023-07-09_23_31_12-Window_t9lfs3.png)
+![Mobile view](https://res.cloudinary.com/duyubdgsj/image/upload/v1693473497/offers_share_project_presentation/2023-08-31_12_02_47-Window_gl2tq6.png)
 
 ### Prometheus
 
