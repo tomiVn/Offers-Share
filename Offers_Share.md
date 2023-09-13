@@ -65,6 +65,7 @@ Offers_Share is built using the following technologies:
 -    [MongoDB](https://www.mongodb.com/): A popular NoSQL database used for storing application data.
 -    [Mongoose](https://mongoosejs.com/): An Object Data Modeling (ODM) library for MongoDB and Node.js.
 -    [Express-Validator](https://express-validator.github.io/): A set of express.js middlewares for input validation and sanitization.
+-    [Nodemailer](https://nodemailer.com/): A module for Node.js applications to allow easy as cake email sending.
 -    [JWT (JSON Web Token)](https://jwt.io/): A standard for securely transmitting information between parties as a JSON object.
 -    [NGRX](https://ngrx.io/): A state management library for Angular applications.
 -    [Docker](https://www.docker.com/): A containerization platform that allows applications to run in isolated environments.
