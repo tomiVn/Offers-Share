@@ -116,6 +116,10 @@ Offers_Share is built using the following technologies:
 
 ![Profile](https://res.cloudinary.com/duyubdgsj/image/upload/v1693473528/offers_share_project_presentation/2023-08-31_12_05_39-_g2efqa.png)
 
+### Admin panel
+
+![Admin panel](https://res.cloudinary.com/duyubdgsj/image/upload/v1695156405/offers_share_project_presentation/2023-09-19_23_35_19-Window_zkvg2v.png)
+
 ### Responsive
 
 ![Mobile view](https://res.cloudinary.com/duyubdgsj/image/upload/v1693473497/offers_share_project_presentation/2023-08-31_12_02_47-Window_gl2tq6.png)
